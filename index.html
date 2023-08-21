@@ -110,12 +110,10 @@ font-family: 'Quicksand', sans-serif;
 
         function subtitle(sub){
           var leg = document.getElementById("subs");
+          leg.style.opacity = 0;
 
           leg.innerHTML = sub;
           leg.style.opacity = 1;
-          setTimeout(function() {
-            leg.style.opacity = 0;
-          }, 5000);
         }
 
 
