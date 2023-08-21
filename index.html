@@ -16,6 +16,7 @@ font-family: 'Quicksand', sans-serif;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    background-color: #50b1f1;
   }
   .texto-centralizado {
     text-align: center;
@@ -39,6 +40,38 @@ font-family: 'Quicksand', sans-serif;
     position: fixed;
     bottom: 10vh;
   }
+  .modal {
+    display: none;
+    position: fixed;
+    transition: 0.2s;
+    color: white;
+    padding: 20px;
+    min-width: 40vh;
+    min-height: 5vh;
+    background-color: #75beefb5;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    bottom: 40px;
+    font-size: 4vh;
+    border-radius: 1rem;
+box-shadow: 0 8px 32px 0 rgba(50, 59, 183, 0.37);
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+
+  .modalBG{
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;    
+    background: rgba(0, 0, 0, 0.282);
+  }
+
   .elemento-centralizado {
     transition: 0.2s;
     background-color: #3498db;
@@ -344,6 +377,11 @@ font-family: 'Quicksand', sans-serif;
         }
         }
     </script>
+
+      <div class="modal">
+        <p>x</p>
+      </div>
+
     <div class="texto-centralizado">
       <p id="score" >Score: 0</p>
     </div>
