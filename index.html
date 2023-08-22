@@ -41,7 +41,7 @@ font-family: 'Quicksand', sans-serif;
     bottom: 10vh;
   }
   .modal {
-    display: none;
+    display: none !important;
     position: fixed;
     transition: 0.2s;
     color: white;
@@ -150,8 +150,14 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
         }
 
 
+        function conquistas(){
+          
+        }
+
+
         function clicker(){
           total += 1;
+          
           document.getElementById("total").innerHTML = "clicks (total): " + total;
 
   if (total === 10) {
@@ -378,7 +384,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
         }
     </script>
 
-      <div class="modal">
+      <div id="modal" class="modal">
         <p>x</p>
       </div>
 
