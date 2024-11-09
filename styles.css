@@ -1,0 +1,129 @@
+    @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Quicksand:wght@700&display=swap');
+
+
+  body {
+    font-family: 'Didact Gothic', sans-serif;
+font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #50b1f1;
+        -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  }
+  .texto-centralizado {
+    text-align: center;
+    position: fixed;
+    top: 6vh;
+  }
+  .texto-centralizado3 {
+    text-align: center;
+    position: fixed;
+    top: 12vh;
+  }
+
+  #subs{
+    opacity: 0;
+    transition: 1s;
+  }
+
+
+  .texto-centralizado2 {
+    text-align: center;
+    position: fixed;
+    bottom: 10vh;
+  }
+  .modal {
+    display: none !important;
+    position: fixed;
+    transition: 0.2s;
+    color: white;
+    padding: 20px;
+    min-width: 40vh;
+    min-height: 5vh;
+    background-color: #75beefb5;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    bottom: 40px;
+    font-size: 4vh;
+    border-radius: 1rem;
+box-shadow: 0 8px 32px 0 rgba(50, 59, 183, 0.37);
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+
+  .modalBG{
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;    
+    background: rgba(0, 0, 0, 0.282);
+  }
+
+  .elemento-centralizado {
+    transition: 0.2s;
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 100%;
+    min-width: 30vh;
+    min-height: 30vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 4vh;
+  }
+
+  .elemento-centralizado:active {
+    transition: 0.2s;
+    margin-top: 2vh;
+    font-size: 3vh;
+
+  }
+  .elemento-centralizado2 {
+    background-color: #5b5b5b;
+    color: white;
+    padding: 20px;
+    border-radius: 10vh;
+    min-width: 40vh;
+    min-height: 40vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    z-index: -2;
+    margin-top: 4vh;
+  }
+
+  .elemento-centralizado3 {
+    background-color: #2c86c2;
+    color: white;
+    padding: 20px;
+    border-radius: 100%;
+    min-width: 30vh;
+    min-height: 30vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    z-index: -1;
+    margin-top: 4vh !important;
+
+  }
+
+  p{
+    text-align: center;
+    
+  }
