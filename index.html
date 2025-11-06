@@ -10,30 +10,115 @@
 
     <script src="main.js"></script>
 
+    <!-- Tela Inicial -->
+    <div id="startScreen" class="start-screen">
+      <div class="start-content">
+        <h1 class="game-title">TRY TO 100</h1>
+        <div class="instructions">
+          <h2>Como Jogar</h2>
+          <p>🎯 Objetivo: Alcançar 100 cliques consecutivos</p>
+          <p>📊 Cada clique diminui 1% de chance de sucesso</p>
+          <p>❌ Se falhar, o contador volta a zero</p>
+          <p>💰 Ganhe moedas para comprar cosméticos e power-ups</p>
+        </div>
+        <button class="start-button" onclick="startGame()">COMEÇAR A JOGAR</button>
+      </div>
+    </div>
+
+    <!-- Notificação de Conquista -->
+    <div id="achievementNotification" class="achievement-notification">
+      <div class="achievement-content">
+        <div class="achievement-icon">🏆</div>
+        <div class="achievement-text">
+          <h3 id="achievementTitle">Conquista Desbloqueada!</h3>
+          <p id="achievementDesc">Descrição da conquista</p>
+          <p id="achievementReward">+100 moedas</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Superior -->
+    <div id="topMenu" class="top-menu" style="display: none;">
+      <div class="menu-item">
+        <span class="menu-label">💰 Moedas:</span>
+        <span id="coinDisplay">0</span>
+      </div>
+      <div class="menu-buttons">
+        <button class="menu-btn" onclick="openShop()">🛒 LOJA</button>
+        <button class="menu-btn" onclick="openAchievements()">🏆 CONQUISTAS</button>
+      </div>
+    </div>
+
+    <!-- Modal da Loja -->
+    <div id="shopModal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>🛒 LOJA</h2>
+          <button class="close-btn" onclick="closeShop()">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="shop-section">
+            <h3>🎨 Cores do Botão</h3>
+            <div id="colorShop" class="shop-grid"></div>
+          </div>
+          <div class="shop-section">
+            <h3>🌟 Power-Ups</h3>
+            <div id="powerupShop" class="shop-grid"></div>
+          </div>
+          <div class="shop-section">
+            <h3>🎭 Efeitos de Fundo</h3>
+            <div id="backgroundShop" class="shop-grid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Conquistas -->
+    <div id="achievementsModal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>🏆 CONQUISTAS</h2>
+          <button class="close-btn" onclick="closeAchievements()">✕</button>
+        </div>
+        <div class="modal-body">
+          <div id="achievementsList" class="achievements-list"></div>
+        </div>
+      </div>
+    </div>
+
       <div id="modal" class="modal">
         <p>x</p>
       </div>
 
-    <div class="texto-centralizado">
-      <p id="score" >Score: 0</p>
-    </div>
-    <div class="texto-centralizado2">
-      <p id="subs" ></p>
-    </div>
-    <div class="texto-centralizado3">
-      <p id="total" >clicks (total): 0</p>
+    <!-- HUD do Jogo -->
+    <div id="gameHUD" style="display: none;">
+      <div class="texto-centralizado">
+        <p id="score" >Score: 0</p>
+      </div>
+      <div class="texto-centralizado2">
+        <p id="subs" ></p>
+      </div>
+      <div class="texto-centralizado3">
+        <p id="total" >clicks (total): 0</p>
+      </div>
+      <div class="active-powerups" id="activePowerups"></div>
     </div>
 
-  <div onclick="clicker()" class="elemento-centralizado" ontouchstart="">
+  <!-- Botão de Clique -->
+  <div id="clickButton" onclick="clicker()" class="elemento-centralizado" ontouchstart="" style="display: none;">
     <p id="counter">0</p>
   </div>
-  <div class="elemento-centralizado3">
+  <div id="clickButtonShadow1" class="elemento-centralizado3" style="display: none;">
   </div>
-  <div class="elemento-centralizado2"> 
+  <div id="clickButtonShadow2" class="elemento-centralizado2" style="display: none;">
 
   </div>
-  <div style="margin-top: 10vh; background-color: #4c4c4c;z-index: -3;" class="elemento-centralizado2"> 
+  <div id="clickButtonShadow3" style="margin-top: 10vh; background-color: #4c4c4c;z-index: -3; display: none;" class="elemento-centralizado2">
 
   </div>
+
+  <!-- Container de Partículas de Fundo -->
+  <div id="backgroundParticles" class="background-particles"></div>
+
 </body>
 </html>
